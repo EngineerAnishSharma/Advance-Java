@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		LinkedList<String> list=new LinkedList<>();
+		list.add("IT");
+		list.add("Comps");
+		list.addFirst("AL ML");
+		list.add(2,"DS");
+		list.addLast("ML");
+		list.set(2,"Mech");
+		list.add("IT");
+		list.add("IT");
+		list.add("IT");
+// 		System.out.println(list);
+		
+// 		for(int i=0;i<list.size();i++){
+// 		    System.out.print(list.get(i)+", ");
+// 		}
+        System.out.println(list.contains("IT"));
+        System.out.println(list.getFirst());
+        System.out.println(list.indexOf("IT"));
+        System.out.println(list.lastIndexOf("IT"));
+        System.out.println(list.element());
+        
+	}
+}

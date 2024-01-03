@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		HashSet<String> hs=new HashSet<>();
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter a size of Hashset:");
+		int n=sc.nextInt();
+		int ctr=0;
+		for(int i=0;i<n;i++){
+		    sc.nextLine();
+		    System.out.println("Add element:");
+		    String x=sc.nextLine();
+		    if(hs.add(x))
+		        ctr+=1;
+		    System.out.println("No. of Unqiue element :"+ctr);
+		}
+		System.out.println(hs);
+	}
+}

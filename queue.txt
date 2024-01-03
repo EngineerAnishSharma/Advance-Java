@@ -1,0 +1,36 @@
+import java.util.*;
+class Student{
+    double cgpi;
+    String name;
+    int id;
+    public Student(double.cgpi,String name,int id){
+        this.cgpi=cgpi;
+        this.name=name;
+        this.id=id;
+    }
+    public String getName(){
+        return name;
+    }
+    public double getCgpi(){
+        return cgpi;
+    }
+    public int getId(){
+        return id;
+    }
+}
+class studComparator implements Comparator<Student>
+
+public class Main
+{
+	public static void main(String[] args) {
+		PriorityQueue<Student> queue1=new PriorityQueue<>(5,StudComparator());
+		Student s1=new Student(9.86,"Anish",11);
+		Student s2=new Student(8.86,"ABC",12);
+		Student s3=new Student(7.86,"XYZ",13);
+		queue1.add(s1);
+		
+		while(!queue1.isEmpty()){
+		    println(queue1.poll.getName());
+		}
+	}
+}

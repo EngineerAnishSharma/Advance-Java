@@ -1,0 +1,52 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		LinkedList<Integer> it1=new LinkedList<>();
+		LinkedList<Integer> it2=new LinkedList<>();
+		
+		System.out.println("Enter number of student:");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		System.out.println("Enter marks of IT1:");
+		for(int i=0;i<n;i++){
+		    int marks=sc.nextInt();
+		    it1.add(marks);
+		}
+		System.out.println("Enter marks of IT2:");
+		for(int i=0;i<n;i++){
+		    int marks=sc.nextInt();
+		    it2.add(marks);
+		}
+		LinkedList<Integer> merge=new LinkedList<>();
+// 		for(int i=0;i<it1.size();i++){
+// 		    merge.add(it1.get(i));
+// 		}
+// 		for(int i=0;i<it2.size();i++){
+// 		    merge.add(it2.get(i));
+// 		}
+        merge.addAll(it1);
+        merge.addAll(it2);
+		System.out.println(merge);
+		Collections.sort(merge);
+		System.out.println(merge);
+		System.out.println(Collections.max(merge));
+		System.out.println(Collections.min(merge));
+		LinkedList<Integer> failed=new LinkedList<>();
+		LinkedList<Integer> passed=new LinkedList<>();
+		int scored=0;
+		for(int i=0;i<merge.size();i++){
+		    if(merge.get(i)<40){
+		        failed.add(merge.get(i));
+		    }
+		    if(merge.get(i)>=40){
+		        passed.add(merge.get(i));
+		    }
+		    if(merge.get(i)>90)
+		        scored+=1;
+		}
+		System.out.println("Marks of student who have failed:"+failed);
+		System.out.println("Marks of student who have passed:"+passed);
+		System.out.println("No. of student who scored above 90:"+scored);
+	}
+}
